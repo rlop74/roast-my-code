@@ -11,16 +11,17 @@ export const SubmissionPost = () => {
                     <p>Definition of the post</p>
                 </div>
             </div>
-            <div className="border-1 p-30 m-10 rounded-xl">
+            <div className="border-1 p-30 m-10 mb-0 rounded-xl">
                 {/* add monaco editor for in-browser code editor */}
             </div>
-            <div className="flex gap-10 m-10">
+            <div className="flex gap-10 mt-2 m-10">
                 <p>upvotes</p>
                 <p>downvotes</p>
             </div>
             <div>
                 <p>comments</p>
             </div>
+            <hr className="mt-20 text-gray-500/50"/>
         </div>
     );
 };
