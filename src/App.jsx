@@ -6,8 +6,13 @@ import { Following } from "./pages/Following";
 import { RoastArena } from "./pages/RoastArena";
 import { Leaderboard } from "./pages/Leaderboard";
 import { Profile } from "./pages/Profile";
+import { Settings } from "./pages/Settings";
+
+import { fetchData } from "./utils/FollowersUtils";
 
 function App() {
+    fetchData("https://dummyjson.com/users");
+
     return (
         <BrowserRouter>
             <Routes>
@@ -17,6 +22,7 @@ function App() {
                     <Route path="/roast-arena" element={<RoastArena />} />
                     <Route path="/leaderboard" element={<Leaderboard />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/settings" element={<Settings />} />
                 </Route>
             </Routes>
         </BrowserRouter>
