@@ -4,13 +4,13 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
-export const SubmissionPostDialog = ({ isOpen, onClose }) => {
+export const SubmissionPostDialog = ({ isOpen, setIsOpen }) => {
     if (!isOpen) {
         return null; // Don't render if not open
     }
 
     return (
-        <Dialog open={open} onClose={handleClose}>
+        <Dialog open={isOpen}>
             <DialogTitle>Subscribe</DialogTitle>
             <DialogContent>
                 <DialogContentText>
@@ -20,10 +20,10 @@ export const SubmissionPostDialog = ({ isOpen, onClose }) => {
                 
             </DialogContent>
             <DialogActions>
-                <Button onClick={handleClose}>Cancel</Button>
-                <Button type="submit" form="subscription-form">
+                <button onClick={() => setIsOpen(false)}>Cancel</button>
+                <button>
                     Subscribe
-                </Button>
+                </button>
             </DialogActions>
         </Dialog>
     );
